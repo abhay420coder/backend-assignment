@@ -48,12 +48,15 @@ app.use(function (req, res, next) {
 
 // app.use(cors());
 
-// use JWT auth to secure the api
-app.use(jwt());
 
+// unsecure api
 app.use("/todoLists" , todoListRoutes) // use routes   // syntax app.use('url' , routerFunction)
 app.use("/contacts" , contactRoutes) // use routes   // syntax app.use('url' , routerFunction)
+
+// use JWT auth to secure the api
+app.use(jwt());
 app.use("/users" , userRoutes) // use routes   // syntax app.use('url' , routerFunction)
+
 app.use(errorHandler) // this is middlware where we chnage error to json // this is a custom middleware which accepts req , resp then in between which is going to transform in between into json
 
 
