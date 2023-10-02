@@ -6,11 +6,21 @@ const {getFullTodoList , getTodoListsById , postTodoList,updateTodoListById,dele
 // routing
 
 /* 
+router.route('/get').get(getFullTodoList)
+router.route('/add').post(postTodoList)
+router.route('/get/:id').get(getTodoListsById)
+router.route('/update/:id').put(updateTodoListById)
+router.route('/delete/:id').delete(deleteTodoListById) 
+
+*/
+
+/* 
 router.route('/').get(getFullTodoList)
 router.route('/').post(postTodoList)
 router.route('/:id').get(getTodoListsById)
 router.route('/:id').put(updateTodoListById)
 router.route('/:id').delete(deleteTodoListById) 
+
 
 
 // works same as
